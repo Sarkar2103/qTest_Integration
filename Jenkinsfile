@@ -25,6 +25,7 @@ pipeline {
 
 
 stages {
+	node("myAgent") {		
         stage('Test Leaf Spine Onboarding') {
           when {
             expression { params.leaf_spine_onboarding == true }
@@ -39,4 +40,5 @@ stages {
           }
         }     
       }
+}
 }
