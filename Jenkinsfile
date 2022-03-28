@@ -14,8 +14,7 @@ def runTest(application) {
 
 testParams = [:]
 
-pipeline {
-  agent none  
+pipeline { 
   parameters {
     booleanParam(name: 'leaf_spine_onboarding',
                  defaultValue: true,
