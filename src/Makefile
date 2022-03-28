@@ -1,3 +1,4 @@
+TEST_RESULTS := test_results
 RXBOT_OUTPUT := -d $(TEST_RESULTS)
 RXBOT_ARGS := -P $(CURDIR) $(RXBOT_OUTPUT)
 
