@@ -14,7 +14,8 @@ def runTest(application) {
 
 testParams = [:]
 
-pipeline { 
+pipeline {
+  agent any
   parameters {
     booleanParam(name: 'leaf_spine_onboarding',
                  defaultValue: true,
@@ -23,8 +24,7 @@ pipeline {
   }
 
 
-stages {
-	node("myAgent") {		
+stages {		
         stage('Test Leaf Spine Onboarding') {
           when {
             expression { params.leaf_spine_onboarding == true }
@@ -39,5 +39,4 @@ stages {
           }
         }     
       }
-}
 }
