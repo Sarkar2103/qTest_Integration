@@ -3,8 +3,7 @@
 def runTest(application) {
 	try {
 		echo "application: $application"
-		dir("test-${application}") {
-			sh "cd src/"
+		dir("test-${application}") {			
 			sh "make test-${application}"
 		}
 	}finally {
